@@ -7,38 +7,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="block">
-        <!-- <img src="images/thumbnail.png"> -->
-        <div id="title">Kaltfisch's MySpace</div>
-        <div class="buttons">
-            <button id="about-me">About Me</button>
-            <button id="galleries">Galleries</button>
-            <button>Place Holder</button>
-            <button>Place Holder</button>
-        </div>
-        <audio autoplay loop>
-            <source src="bgm.mp3" type="audio/mp3">
-            ocean sunset - chill lofi beats by lofidreams
-        </audio>
-        <div class="links">
-            <button id="github"></button>
-            <button id="youtube"></button>
-        </div>
+    <audio autoplay loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
 
-        <!--Waves start-->
-            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-                <defs>
-                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-                </defs>
-                <g class="parallax">
-                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(210,180,120,0.7)" />
-                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(210,180,120,0.5)" />
-                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(210,180,120,0.3)" />
-                    <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(210,180,120,1)" />
-                </g>
-            </svg>
-        </div> <!--ref: https://foolishdeveloper.com/css-wave-animation-->
-        <!--Waves end-->
+    <div id="left">
+        <div id="top-banner"></div>
+        <div id="bottom-banner"></div>
     </div>
+    <div id="menu">
+        <img id="menu-bg" src="images/index-menu.png">
+        <div id="main-bt-container">
+            <img class="main-bt" id="archive" src="images/index-menu-button1.png">
+            <img class="main-bt" id="gallery" src="images/index-menu-button2.png">
+            <img class="main-bt" id="projects" src="images/index-menu-button3.png">
+        </div>
+    </div>
+    <div id="right">
+        <img class="side-bt">
+        <img class="side-bt">
+        <img class="side-bt">
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

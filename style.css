@@ -1,99 +1,34 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#title {
-    font-family: "Ubuntu Mono", monospace;
-    font-size: 48px;
-    font-weight: bold;
-    color: white;
+body, html {
+  height: 100%;
+  overflow: hidden;
 }
 
-.links button {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
+#menu {
+  position: relative;
+  display: inline-block;
 }
 
-#github {
-    background-image: url(images/github-icon.svg);
+#menu-bg {
+  display: block; /* removes inline whitespace gap */
+  height: 100vh;
 }
 
-#youtube {
-    background-size: 30px;
-    background-image: url(images/youtube-icon.svg);
+#main-bt-container {
+  position: absolute;
+  inset: 0; /* stretches to cover #menu exactly */
 }
 
-
-
-/* Waves Animation start*/
-
-body {
-    position: relative;
-    height: 100vh;
-    margin: 0;
-    background: #1d9ed1;
-    background: linear-gradient(rgba(29, 158, 209, 1) 0%, rgba(121, 169, 189, 1) 100%);
+.main-bt {
+  position: absolute;
+  height: auto;
 }
 
-.waves {
-    position: absolute;
-    width: 100%;
-    height: 15vh;
-    min-height: 100px;
-    max-height: 150px;
-    bottom: 0;
-    left: 0;
-}
-
-.parallax>use {
-    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-}
-
-.parallax>use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
-}
-
-.parallax>use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
-}
-
-.parallax>use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
-}
-
-.parallax>use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-}
-
-@keyframes move-forever {
-    0% {
-        transform: translate3d(-90px, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(85px, 0, 0);
-    }
-}
-
-
-/*Shrinking for mobile*/
-
-@media (max-width: 768px) {
-    .waves {
-        height: 40px;
-        min-height: 40px;
-    }
-}
-
-/* Waves Animation end*/
+#archive  { top: 29.5%; left: 0%; width: 78%; }
+#gallery  { top: 51%; left: 40%; width: 60%; }
+#projects { top: 50%; left: 4%; width: 38%; }
