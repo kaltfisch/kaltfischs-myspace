@@ -1,0 +1,29 @@
+#gallery-container {
+  columns: 3;
+  column-gap: 10px;
+  padding: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 30px;
+}
+
+.artwork {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.top-left-sticker, .top-right-sticker,
+.bottom-left-sticker, .bottom-right-sticker {
+  position: absolute;
+  width: 15%;
+  height: auto;
+}
+
+.top-left-sticker { top: 0%; left: -1%; }
+.top-right-sticker { top: 0%; right: 1%; }
+.bottom-left-sticker { bottom: -2%; left: -1%;}
+.bottom-right-sticker { bottom: -2%; right: 1%; }
