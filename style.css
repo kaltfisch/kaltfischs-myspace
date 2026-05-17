@@ -4,14 +4,90 @@
   box-sizing: border-box;
 }
 
-body, html {
-  height: 100%;
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
   overflow: hidden;
 }
+
+#left, #right {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* left sidebar start */
+
+#left {
+  align-items: flex-start;
+  justify-content: center;
+  gap: 5%;
+}
+
+#updates {
+  position: relative;
+  display: inline-block;
+  min-height: 0;
+  max-height: 50vh;
+}
+
+#updates-bg {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  max-height: 50vh;
+  min-height: 0;
+}
+
+#update-msg-container {
+  position: absolute;
+  inset: 0;
+  width: 80%;
+  height: 100%;
+  top: 25%;
+  left: 10%;
+}
+
+.update-msg {
+  border: 2px solid black;
+  height: 15%;
+  padding: 2%;
+  font-family: monospace;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  min-height: 0;
+  flex-shrink: 0; /* stop links from growing with the container */
+}
+
+.link {
+  width: 90%;
+  transition: width 0.15s ease;
+  display: block;
+  object-fit: contain;
+}
+
+.link:hover {
+  width: 100%;
+}
+
+/* left sidebar end */
+
+/* menu start */
 
 #menu {
   position: relative;
   display: inline-block;
+  flex-shrink: 0;
 }
 
 #menu-bg {
@@ -32,3 +108,33 @@ body, html {
 #archive  { top: 29.5%; left: 0%; width: 78%; }
 #gallery  { top: 51%; left: 40%; width: 60%; }
 #projects { top: 50%; left: 4%; width: 38%; }
+
+/* menu end */
+
+/* right sidebar start */
+
+#sushi {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 1%;
+}
+
+.side-bt {
+  min-height: 0;
+  max-height: 100%;
+  display: block;
+  width: 100%;
+  flex: 1;
+  object-fit: contain;
+}
+
+#guestbook {
+  flex: 1;
+  min-height: 0;
+  object-fit: contain;
+  margin-bottom: -2%;
+}
+
+/* right sidebar end */
