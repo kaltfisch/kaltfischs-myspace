@@ -1,3 +1,9 @@
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 #gallery-container {
   columns: 3;
   column-gap: 10px;
@@ -7,13 +13,18 @@
 .gallery-item {
   position: relative;
   break-inside: avoid;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .artwork {
+  background-color: #fff;
   width: 100%;
   height: auto;
   display: block;
+}
+
+.artwork:hover {
+    box-shadow: 0 0 45px #a2f5f5;
 }
 
 .top-left-sticker, .top-right-sticker,
@@ -24,6 +35,6 @@
 }
 
 .top-left-sticker { top: 0%; left: -1%; }
-.top-right-sticker { top: 0%; right: 1%; }
+.top-right-sticker { top: 0%; right: -1%; }
 .bottom-left-sticker { bottom: -2%; left: -1%;}
-.bottom-right-sticker { bottom: -2%; right: 1%; }
+.bottom-right-sticker { bottom: -2%; right: -1%; }
